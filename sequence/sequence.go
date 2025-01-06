@@ -102,7 +102,7 @@ func (d *Diagram) ResponseErrorf(from, to, format string, args ...any) *Diagram 
 
 // AsyncRequest add a async request to the sequence diagram.
 func (d *Diagram) AsyncRequest(from, to, message string) *Diagram {
-	d.body = append(d.body, fmt.Sprintf("    %s->)%s: %s", from, to, message))
+	d.body = append(d.body, fmt.Sprintf("    %s-)%s: %s", from, to, message))
 	return d
 }
 
